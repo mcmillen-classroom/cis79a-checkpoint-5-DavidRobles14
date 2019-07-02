@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+
+    <string name="question_text">Placeholder for now...</string>
+    <string name="question_1">Ichigo, from Bleach, dyed his hair.</string>
+    <string name="question_2">Ichigo\'s mom died of natural causes.</string>
+    <string name="question_3">Ichigo can see ghosts</string>
+    <string name="question_4">Ichigos dad is a regular human</string>
+    <string name="question_5">Ichigo is the oldest child</string>
+    <string name="question_6">What is the name of Ichigo\'s sword?</string>
+    <string name="question_7">What is Ichigo\'s mom</string>
+
+    <string name="question_1_hint">He gets mad when they ask him this</string>
+    <string name="question_2_hint">Only some people know how she died</string>
+    <string name="question_3_hint">He is a Soul Reaper</string>
+    <string name="question_4_hint">Soul Reaper powers are genetic</string>
+    <string name="question_5_hint">He has two sisters</string>
+    <string name="question_6_hint">It stats with Zan</string>
+    <string name="question_7_hint">She is not like the dad</string>
+
+    <string-array name="question_6_answers">
+        <item>Zangetsu</item>
+        <item>zangetsu</item>
+    </string-array>
+
+    <string-array name="question_7_answers">
+        <item>Hollow</item>
+        <item>Soul Reaper</item>
+        <item>Quincy</item>
+        <item>Visored</item>
+    </string-array>
+
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="check_button">Check</string>
+    <string name="next_button">Next</string>
+    <string name="prev_button">Prev</string>
+    <string name="hint_button">Hint</string>
+    <string name="restart_button">Restart</string>
+
+    <string name="cheat_button">Cheat</string>
+    <string name="cheat_warning">Are you sure you want to cheat???? Cheaters never win</string>
+    <string name="show_answer_button">Show Answer</string>
+    <string name="cheat_shame">CHEATER NEVER WIN</string>
+
+    <string name="correct_toast">Correct!</string>
+    <string name="incorrect_toast">Incorrect!</string>
+
+    <string name="score">Score: </string>
+    <string name="end">You have finished</string>
+
+
+</resources>
