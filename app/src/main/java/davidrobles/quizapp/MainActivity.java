@@ -2,6 +2,7 @@ package davidrobles.quizapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -69,7 +70,7 @@ public class  MainActivity extends AppCompatActivity implements View.OnClickList
         mNextButton = (ImageButton) findViewById(R.id.next_button);
         mHintButton = (Button) findViewById(R.id.hint_button);
         mCheatButton = (Button) findViewById(R.id.cheat_button);
-        mRestartButton = (Button) findViewById(R.id.restart_button);
+        mRestartButton = (Button) findViewById(R.id.first_restart_button);
         mRestartButton.setVisibility(View.GONE);
 
 
@@ -225,19 +226,23 @@ public class  MainActivity extends AppCompatActivity implements View.OnClickList
             }
             else
             {
-                mTextView.setText("You are done! Your Score Was " + mScore);
-                mScoreText.setText(mOgScoreText + mScore);
-                mRestartButton.setVisibility(View.VISIBLE);
-                mTrueButton.setVisibility(View.GONE);
-                mFalseButton.setVisibility(View.GONE);
-                mPrevButton.setVisibility(View.GONE);
-                mNextButton.setVisibility(View.GONE);
-                mHintButton.setVisibility(View.GONE);
-                mMultipleChoiceContainer.setVisibility(View.GONE);
+                //QuizOverActivity
+                Intent overIntent = QuizOverActivity.newIntent(this, mScore);
+                startActivity(overIntent);
+
+//                mTextView.setText("You are done! Your Score Was " + mScore);
+//                mScoreText.setText(mOgScoreText + mScore);
+//                mRestartButton.setVisibility(View.VISIBLE);
+//                mTrueButton.setVisibility(View.GONE);
+//                mFalseButton.setVisibility(View.GONE);
+//                mPrevButton.setVisibility(View.GONE);
+//                mNextButton.setVisibility(View.GONE);
+//                mHintButton.setVisibility(View.GONE);
+//                mMultipleChoiceContainer.setVisibility(View.GONE);
             }
             //DO IF STATEMENT HERE:
         }
-        else if(view.getId() == R.id.restart_button)
+        else if(view.getId() == R.id.first_restart_button)
         {
             mIndex = 0;
             mHintIndex = 1;
@@ -378,5 +383,15 @@ public class  MainActivity extends AppCompatActivity implements View.OnClickList
             myToast.show();
             return false;
         }
+    }
+
+    public static Intent newIntent(Context ctx) {
+        Intent ret = new Intent(ctx, MainActivity.class);
+        return ret;
+    }
+
+    public int getScore()
+    {
+        return mScore;
     }
 }
