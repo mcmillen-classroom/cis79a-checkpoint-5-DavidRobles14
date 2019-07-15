@@ -28,6 +28,8 @@ public class Question
         return ctx.getString(mTextResId);
     }
 
+
+
     // stub
     public String getAnswerText(Context ctx)
     {
